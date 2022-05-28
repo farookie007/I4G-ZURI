@@ -10,9 +10,11 @@ class Student:
         self.score = float(score)
     
     def change_name(self, name: str):
+        "Changes the name of the `Student` object"
         self.name = name
 
     def change_age(self, age: int):
+        "Changes the age of the `Student` object"
         self.age = int(age)
     
     def add_track(self, track):
