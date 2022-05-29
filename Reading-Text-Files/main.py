@@ -48,6 +48,3 @@ def _strip_punctuation(word: str) -> str:
         return _strip_punctuation(word[1:])
     else:
         return _strip_punctuation(word[:-1])
-
-
-print(count_words())
