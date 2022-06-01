@@ -17,10 +17,12 @@ while True:     # starting the game loop
     player = input("\n\tR - ROCK\n\tP - PAPER\n\tS - SCISSORS\nMake your play: ").upper()   # the player makes his/her play
     computer = random.choice(list(GAME_OPTIONS.keys()))     # the computer makes its play by randomly choosing one of the game options
 
+
     if not GAME_OPTIONS.get(player):
         print("[-] Invalid Option. Please Try Again!")
         continue
 
+    print(f"Player ({GAME_OPTIONS.get(player)}) : CPU ({GAME_OPTIONS.get(computer)})")      # printing the players choices
     # starting the game logic
     if player == computer:  # asks the player to try again if it is a tie
         print("\nIt is a TIE. Play Again.")
