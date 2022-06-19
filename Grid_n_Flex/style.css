@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap');
 
 
+:root {
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --heading-color: hsl(0, 0%, 95%);
+    --gen-font: 0.5em;
+     --sedans-bg-color: hsl(31, 77%, 52%);
+     --luxury-bg-color: hsl(179, 100%, 13%);
+     --suv-bg-color: hsl(184, 100%, 22%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +20,87 @@ body {
     background-color: rgb(17, 17, 17);
     height: 100vh;
     display: flex;
+    font-size: 15px;
+}
+p {
+    color: var(--paragraph-color);
+    font-family: "Lexend Deca";
+    font-size: var(--gen-font);
+    margin: 10px 0px;
+    line-height: 12px;
+}
+h2 {
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display";
+    text-transform: uppercase;
+    margin: 15px 0px;
 }
 
 main {
     width: 70%;
-    height: 70%;
+    height: 80%;
     background-color: #eeeeee;
-    display: flex;
+}
+
+.column {
+    padding: 5% 6.2%;
+    position: relative;
+}
+
+button {
+    position: absolute;
+    bottom: 8%;
+    font-size: var(--gen-font);
+    padding: 8px 10px;
+    width: 50%;
+    border: 0px;
+    border-radius: 30px 30px;
+}
+
+.row {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.centralize {
     margin: auto;
+    display: flex;
+}
+.icon {
+    width: 30%;
+    margin: 0px 0px;
+}
+
+.sedans {
+    background-color: var(--sedans-bg-color);
+    border-radius: 5px 0 0 5px;
+}
+.sedans > button {
+    color: var(--sedans-bg-color);
+}
+.suv > button {
+    color: var(--suv-bg-color);
+}
+.luxury > button {
+    color: var(--luxury-bg-color);
+}
+
+.suv {
+    background-color: var(--suv-bg-color);
+}
+.luxury {
+    background-color: var(--luxury-bg-color);
+    border-radius: 0 5px 5px 0;
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        width: 100%;
+    }
+    button {
+        border-radius: 5px 5px;
+        padding: 3px 5px;
+    }
 }
