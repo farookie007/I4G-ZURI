@@ -18,7 +18,7 @@ a#grid-link {
     top: 1%;
     position: fixed;
     font-size: var(--gen-font);
-    padding: 5px 5px;
+    padding: 3px;
     border: 2px solid white;
     border-radius: 30px 30px;
     background-color: white;
