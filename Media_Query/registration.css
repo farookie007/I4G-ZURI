@@ -91,6 +91,7 @@ input#submit {
     color: var(--color);
     box-shadow: 0px .2em rgb(93, 154, 126);
 }
+
 a {
     text-decoration: none;
     font-weight: 700;
@@ -111,6 +112,14 @@ span {
         padding: 0;
         box-sizing: border-box;
     }
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+        background-color: var(--red);
+        font-size: 16px;
+        font-family: Poppins, calibri;
+        color: --color;
+        min-height: 100vh;
+    }
     main {
         display: flex;
         flex-direction: column;
@@ -118,6 +127,36 @@ span {
         padding: 5em 0px;
         margin: auto;
         text-align: center;
+        justify-content: space-around;
+    }
+    .form-container, .watchword {
+        width: 100%;
+        margin: 0px;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 80px 0px;
+
+    }
+    .watchword p {
+        margin: auto;
+        margin-top: 20px;
+    }
+    input {
+        padding: 1em;
+    }
+    input {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 1000px)  and (min-width:375px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     body {
         background-image: url(images/bg-intro-mobile.png);
@@ -127,9 +166,35 @@ span {
         color: --color;
         min-height: 100vh;
     }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 5em 0px;
+        margin: auto;
+        text-align: center;
+        justify-content: space-around;
+    }
     .form-container, .watchword {
         width: 100%;
-        margin: 0;
+        margin: 0px;
     }
-    
+
+    p {
+        font-size: 1em;
+        margin: 80px 0px;
+        
+    }
+    .watchword p {
+        margin: auto;
+        margin-top: 20px;
+    }
+    input {
+        padding: 1em;
+    }
+    input {
+        font-size: 1.3em;
+    }
+
 }
+
