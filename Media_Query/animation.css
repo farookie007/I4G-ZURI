@@ -4,7 +4,8 @@
   --pale_cyan: hsl(193, 100%, 96%);
   --dark_cyan: hsl(192, 100%, 9%);
   --grayish-blue: hsl(208, 11%, 55%);
-  --shadow: 0px 0px 1px 0px var(--grayish-blue);
+  --grayish-blue-shadow: hsla(208, 11%, 55%, 10%);
+  --shadow: 0px 0px 15px 0.5px var(--grayish-blue-shadow);
   --whitee: #ffffff;
 }
 * {
@@ -122,13 +123,71 @@ button {
 footer {
   background-color: var(--dark_cyan);
   padding-top: 5em;
+  color: var(--pale_cyan);
 }
-
 .footer-container {
   display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 1.5em auto;
+  font-size: 0.8em;
+}
+
+.footer-logo {
   width: 80%;
   margin: auto;
 }
 .address-bar {
   width: 30%;
+}
+.last-bar {
+  width: 15%;
+}
+
+.other-addr {
+  width: 15%;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+}
+.social-icons li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pale_cyan);
+}
+li {
+  list-style-type: none;
+  margin: 0 0 1em;
+}
+
+.address-desc {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1em;
+}
+.address-desc i {
+  width: 8%;
+  height: fit-content;
+}
+
+address {
+  font-size: 0.9em;
+  text-decoration-style: none;
+  width: 85%;
+}
+
+
+@media screen and (max-height:950px) {
+  div#bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
 }
