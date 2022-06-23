@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+
 :root {
   --pink: hsl(322, 100%, 66%);
   --pale_cyan: hsl(193, 100%, 96%);
@@ -36,10 +38,10 @@ h1, h2 {
   text-transform: capitalize;
   font-family: Poppins;
 }
-div {
+/* div {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-}
+} */
 main {
   margin: auto;
   margin-top: 100px;
@@ -50,7 +52,7 @@ header {
   background: url(images/bg-hero-desktop.svg);
   background-color: var(--pale_cyan);
 }
-.headers, .section-container {
+.section-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,7 +63,12 @@ header {
   flex-direction: row-reverse;
 }
 
-
+.headers {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1em auto;
+}
 .header-top {
   padding: 2em 0;
 }
@@ -182,12 +189,83 @@ address {
   width: 85%;
 }
 
+.copyright {
+  width: 90%;
+  text-align: right;
+  font-size: 0.7em;
+  margin-bottom: 20px;
+}
 
-@media screen and (max-height:950px) {
+
+@media screen and (max-width:950px) {
   div#bottom {
-    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+  }
+  .header-bottom .section {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .header-bottom img {
+    width: 100%;
+  }
+  .outro {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .section-container, .section-container:nth-child(even) {
+    flex-direction: column;
+  }
+  .section-container > * {
+    width: 100%;
+  }
+
+  .section-container img {
+    margin: auto;
+  }
+
+  .outro {
+    width: 95%;
+    font-size: 0.7em;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-container > * {
+    margin: 2em;
+    width: 80%;
+  }
+  .social-icons {
+    margin: auto;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
   }
   
+}
+
+@media screen and (max-width: 375px) {
+  .section-container, .section-container:nth-child(even) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .section-container img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .header-bottom {
+    text-align: center;
+    font-size: 0.7em;
+  }
+  .header-bottom p.message {
+    font-size: 1.3em;
+  }
+  .outro {
+    width: 95%%;
+    font-size: 0.7em;
+  }
+
 }
