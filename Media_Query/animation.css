@@ -264,8 +264,16 @@ address {
     font-size: 1.3em;
   }
   .outro {
-    width: 95%%;
+    width: 95%;
     font-size: 0.7em;
+  }
+  .header-top img {
+    height: 10px;
+    width: auto;
+  }
+  .header-top button {
+    height: 10px;
+    width: auto;
   }
 
 }
