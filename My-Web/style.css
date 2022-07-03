@@ -1,0 +1,410 @@
+* {
+  margin: 0px;
+
+}
+#home,
+#registration,
+#login {
+  color: #f2d532;
+}
+
+body {
+  background-color: #000000;
+  color: #efefef;
+  font-family: calibri;
+  font-size: small;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  padding-top: 10px;
+}
+header .nav-links {
+  width: 50%;
+}
+
+footer {
+ width: 80%;
+ margin: auto;
+ margin-bottom: 100px;
+}
+footer .nav-links {
+  margin: auto;
+}
+footer .nav-links * {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.nav-links li {
+  float: left;
+  margin-top: 70px;
+}
+.nav-links ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#profile-img, fieldset {
+  border-radius: 20px;
+  border: 2px solid #f2d532;
+}
+#profile-img {
+  height: 300px;
+  width: 350px;
+}
+
+.top {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+  padding: 10px;
+  border: 2px solid #f2d532;
+}
+
+.intro {
+  width: 60%;
+  padding: 0px 20px;
+}
+.intro p {
+  margin-bottom: 15px;
+  font-size: larger;
+}
+.intro a, .form-container a, footer a {
+  color: lightblue;
+}
+
+.perks {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.sub-section {
+  background-color: #121212;
+  border-radius: 20px;
+  width: 20%;
+  border: 2px solid #f2d532;
+  padding: 5px 0px;
+}
+.sub-section h4 {
+  text-align: center;
+  color: #f2d532;
+  padding: 10px 0px;
+}
+.sub-section li {
+  font-size: larger;
+  list-style-type: disc;
+}
+
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+li {
+  list-style-type: none;
+}
+hr {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #f2d532;
+}
+
+#blink {
+  animation: blink 1s infinite;
+  color: #fff;
+  border: 1px solid;
+  background-color: #ffffff;
+  text-shadow: 0px 0px 0px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro h2 span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  color: #00ff00;
+  text-shadow: 2px 0px 2px 00ff00;
+  display: inline-block;
+}
+footer .nav-links li i {
+  display:inline;
+  color: white;
+}
+
+h2 {
+  font-family: cursive;
+}
+main .nav-links li i {
+  display: none;
+}
+#logo-container {
+  font-family: "Courier New", Courier, monospace;
+  border: 3px solid #9dfe0c;
+  border-radius: 10px;
+  background-color: #00ff00;
+  margin-top: 20%;
+}
+#logo-container a {
+  color: black;
+}
+
+#contact-me {
+  width: 50%;
+  margin: auto;
+
+}
+#contact-me button {
+  width: 100%;
+  padding: 10px;
+  background-color: gold;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: xx-large;
+}
+
+/* Styling the forms */
+
+fieldset {
+  width: 50%;
+  margin: auto;
+  background-color: #121212;
+}
+
+legend {
+  text-align: center;
+  border-radius: 5px;
+  font-size: larger;
+  padding: 0px 10px;
+}
+
+input, textarea, select {
+  display: block;
+  width: 95%;
+  padding: 10px 2px;
+  font-size: medium;
+  border-radius: 5px;
+  margin: auto;
+  border: 1px inset #f2d532;
+  margin-top: 8%;
+  background-color: #212121;
+  color: #cccccc
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+  font-family: Calibri;
+}
+
+textarea::placeholder {
+  font-size: large;
+  font-family: Calibri;
+}
+
+
+#submit-button {
+  background-color: #000000;
+  color: #f2d532;
+  font-size: larger;
+  border: 2px solid #f2d532;
+  margin-bottom: 5px;
+  padding: 10px 0px;
+}
+
+.options {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width:1700px) {
+  fieldset {
+    width: 70%;
+  }
+  
+}
+@media screen and (max-width:1500px) {
+  fieldset {
+    width: 70%;
+  }
+  
+}
+@media screen and (max-width:1200px) {
+  main .nav-links li i {
+    display:inline;
+    /* color: white; */
+  }
+  
+  main .nav-links li span {
+    display:none;
+    /* color: white; */
+  }
+
+  
+}
+@media screen and (max-width:1000px) {
+  fieldset {
+    width: 90%;
+  }
+  .top {
+    flex-direction: column-reverse;
+    width: 80%;
+    margin: auto;
+  }
+  .top .intro {
+    margin: auto;
+    width: 80%;
+  }
+  .intro h2 {
+    margin: 0.5em auto 2em;
+    text-align: center;
+  }
+  .profile-img-container {
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    height: auto;
+  }
+
+  #profile-img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+}
+
+@media screen and (max-width:950px) {
+  .perks {
+    flex-direction: column;
+    width: 60%;
+    margin: 5em auto;
+    padding: 1em;
+
+    border: 2px dashed #f2d532;
+    border-radius: 25px;
+
+  }
+  .sub-section {
+    width: 100%;
+    /* text-align: center; */
+    margin: 1em 0;
+    border: 0;
+  }
+  .sub-section ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .sub-section li {
+    list-style-type: none;
+  }
+
+}
+
+@media screen and (max-width:850px) {
+  .sub-section {
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+    border: 0;
+  }
+  .sub-section ul {
+    display: block;
+  }
+  .intro h2 span{
+    font-size: 180%;
+  }
+  .intro h2 {
+    /* margin: 0.5em auto 2em; */
+    text-align: left;
+  }
+  .top {
+    width: 80%;
+  }
+  #contact-me {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:420px) {
+  fieldset {
+    width: 95%;
+  }
+  footer .nav-links * {
+    padding: 0;
+  }
+  footer .nav-links ul {
+    display:block;
+  }
+  footer .nav-links li {
+    margin: 5px 10px;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+  }
+  footer .nav-links {
+    margin: auto;
+  }
+  .top {
+    width: 95%;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header div {
+    width: 80%;
+    margin: auto;
+  }
+  #logo-container {
+    margin: 0;
+  }
+  
+  header .nav-links ul {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  
+  header .nav-links {
+    width: 100%;
+  }
+
+  footer .nav-links li, header .nav-links li {
+    margin-top: 5px;
+  }
+
+}
+
+
+

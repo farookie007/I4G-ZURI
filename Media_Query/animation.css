@@ -23,6 +23,7 @@ body {
   font-family: "Open Sans";
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 main {
   width: 80%;
@@ -38,10 +39,7 @@ h1, h2 {
   text-transform: capitalize;
   font-family: Poppins;
 }
-/* div {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-} */
+
 main {
   margin: auto;
   margin-top: 100px;
@@ -71,6 +69,12 @@ header {
 }
 .header-top {
   padding: 2em 0;
+  background-color: var(--pale_cyan);
+  position: sticky;
+  position: -webkit-sticky; /* for browsers like Safari */
+  top: 0;
+  /* border: 2px dashed red; */
+  
 }
 
 
@@ -79,6 +83,10 @@ header {
   padding: 1.5em 2em;
   width: 100%;
   border-radius: 15px;
+}
+#logo {
+  height: 25px;
+  width: auto;
 }
 .section {
   height: max-content;
@@ -267,12 +275,9 @@ address {
     width: 95%;
     font-size: 0.7em;
   }
-  .header-top img {
-    height: 10px;
-    width: auto;
-  }
+  
   .header-top button {
-    height: 10px;
-    width: auto;
+    height: auto;
+    padding: 0.5em 2em;
   }
 }

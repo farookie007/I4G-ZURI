@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-family: Calibri;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    vertical-align: top;
+    border-radius: 10px;
+}
+
+#main {
+    background-color: beige;
+    border: 1px solid bisque;
+}
+#sidebar {
+    background-color: lightblue;
+    border: 1px solid blue;
+}
+

@@ -1,0 +1,131 @@
+body {
+    font-family: "Open Sans", Calibri;
+    margin: 0px;
+    background-color: rgba(200, 200, 200, 1);
+  }
+  
+  figure {
+    border: 1px solid gold;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+  figcaption {
+    background-color: #222;
+    font: italic smaller sans-serif;
+    text-align: center;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 5px;
+  }
+  
+  header {
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgba(128, 0, 128, 1);
+    color: gold;
+    font-size: 1em;
+    padding-left: 20px;
+    border-top: 5px solid gold;
+    border-bottom: 5px solid gold;
+  }
+  
+  h1 {
+    font-size: 300%;
+  }
+  
+  small {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  
+  .heading {
+    height: 300px;
+    width: 100%;
+    padding: 0px;
+    opacity: 90%;
+    border-start-end-radius: 10px;
+    border-start-start-radius: 10px;
+  }
+  
+  .bg-img {
+    width: 100%;
+    height: 150%;
+    opacity: 20%;
+    position: absolute;
+    border: 0px;
+  }
+  
+  .img-container {
+    width: 70%;
+    text-align: end;
+    padding-top: 5px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  div {
+    width: 28%;
+    height: 500px;
+    padding: 20px;
+  }
+  
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+  }
+  
+  li {
+    padding: 5px;
+  }
+  
+  .story {
+    width: 44%;
+  }
+  blockquote {
+    background: rgb(242, 224, 124);
+    border-left: 10px solid rgb(198, 113, 198);
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+
+.description {
+    text-align: start;
+  }
+  
+  blockquote:before {
+    color: black;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  
+  li {
+    list-style-type: "🏀";
+    padding-inline-start: 1ch;
+  }
+  p {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  

@@ -23,7 +23,7 @@ body {
     background-color: var(--red);
     font-size: 16px;
     font-family: Poppins, calibri;
-    height: 100vh;
+    min-height: 100vh;
     color: --color;
 }
 input {
