@@ -280,4 +280,8 @@ address {
     height: auto;
     padding: 0.5em 2em;
   }
+  .outro button {
+    height: auto;
+    padding: 0.5em 2em;
+  }
 }
