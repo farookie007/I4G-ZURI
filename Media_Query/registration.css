@@ -35,6 +35,9 @@ input {
     border-radius: var(--radius);
     border: 1px solid var(--grayish-blue);
 }
+.input-container {
+    position: relative;
+}
 input::placeholder {
     font-weight: 700;
 }
@@ -42,13 +45,25 @@ input:focus {
     outline: none !important;
     border-color: var(--red);
     border-width: 3px;
-
 }
 
-input#firstName::placeholder {
-    content: "making";
+i {
+    position: absolute;
+    right: 3em;
+    top: 0.8em;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
 }
 
+
+input:placeholder-shown:focus + .placeholder + i {
+    display: block;
+    z-index: 999;
+}
 input:placeholder-shown:focus + #fName::after {
     content: "First Name cannot be empty";
 }
@@ -60,9 +75,6 @@ input:placeholder-shown:focus + #eMail::after {
 }
 input:placeholder-shown:focus + #passWord::after {
     content: "Password cannot be empty";
-}
-input:placeholder-shown::after {
-    content: "maker";
 }
 .placeholder {
     display: block;
