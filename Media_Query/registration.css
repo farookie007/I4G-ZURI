@@ -58,9 +58,22 @@ i {
     background-size: contain;
     display: none;
 }
+#error-msg {
+    display: none;
+    position: absolute;
+    font-size: 0.8em;
+    left: 1em;
+    top: 0em;
+    color: var(--red);
+    font-weight: 500;
+}
 
 
 input:placeholder-shown:focus + .placeholder + i {
+    display: block;
+    z-index: 999;
+}
+input:placeholder-shown:focus + .placeholder + i + #error-msg {
     display: block;
     z-index: 999;
 }
@@ -88,19 +101,19 @@ input:placeholder-shown:focus + #passWord::after {
 }
 
 
-h2 {
-    font-size: 2em;
+h1 {
+    font-size: 3em;
 }
 main {
     height: 80%;
-    width: 70%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: auto;
 }
 p {
-    font-size: 0.6em;
+    font-size: 1em;
     margin: 20px 0;
 }
 .top {
@@ -118,7 +131,7 @@ p {
 
 
 .watchword {
-    width: 40%;
+    width: 45%;
     color: var(--color);
 }
 .form-container {
