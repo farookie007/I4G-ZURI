@@ -32,10 +32,14 @@ Sorry for the inconveniences
                 <b>Try it free 7 days</b> then $20/mo. thereafter
             </div>
             <form action="#" method="post">
-                <input type="text" name="f_name" placeholder="First Name" required>
-                <input type="text" name="l_name" placeholder="Last Name" required>
+                <input type="text" name="f_name" placeholder="First Name" id="firstName" required>
+                <span class="placeholder" id="fName"></span>
+                <input type="text" name="l_name" placeholder="Last Name" id="lastName" required>
+                <span class="placeholder" id="lName"></span>
                 <input type="email" name="email" id="email" placeholder="Email Address" pattern="/w+@/w+./w" required>
+                <span class="placeholder" id="eMail"></span>
                 <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="placeholder" id="passWord"></span>
                 <input type="submit" value="CLAIM YOUR FREE TRIAL" id="submit">
 
                 <p class="bottom"><span>By clicking this buton you are agreeing to our </span><a href="#">Terms and Services</a></p>

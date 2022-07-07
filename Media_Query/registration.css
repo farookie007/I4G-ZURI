@@ -23,7 +23,7 @@ body {
     background-color: var(--red);
     font-size: 16px;
     font-family: Poppins, calibri;
-    min-height: 100vh;
+    height: 100vh;
     color: --color;
 }
 input {
@@ -35,9 +35,44 @@ input {
     border-radius: var(--radius);
     border: 1px solid var(--grayish-blue);
 }
-
 input::placeholder {
     font-weight: 700;
+}
+input:focus {
+    outline: none !important;
+    border-color: var(--red);
+    border-width: 3px;
+
+}
+
+input#firstName::placeholder {
+    content: "making";
+}
+
+input:placeholder-shown:focus + #fName::after {
+    content: "First Name cannot be empty";
+}
+input:placeholder-shown:focus + #lName::after {
+    content: "Last Name cannot be empty";
+}
+input:placeholder-shown:focus + #eMail::after {
+    content: "Looks like this is not an email";
+}
+input:placeholder-shown:focus + #passWord::after {
+    content: "Password cannot be empty";
+}
+input:placeholder-shown::after {
+    content: "maker";
+}
+.placeholder {
+    display: block;
+    width: 95%;
+    text-align: right;
+    font-size: 0.7em;
+    color: var(--red);
+    font-weight: 500;
+    font-style: italic;
+    padding-bottom: 1em;
 }
 
 
