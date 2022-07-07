@@ -248,7 +248,8 @@ span {
 
     p {
         font-size: 1em;
-        margin: 80px 0px;
+        margin: 80px auto;
+        width: 80%;
         
     }
     .watchword p {
@@ -261,10 +262,18 @@ span {
     input {
         font-size: 1em;
     }
-    
+
+
     #error-msg {
-        top: -6.5em;
+        position: absolute;
+        font-size: 1em;
+        top: -6em;
+        left: 1.3em;
+        width: fit-content;
+        color: var(--red);
+        font-weight: 500;
     }
+    
     i {
         right: 5em;
         top: 1em;
@@ -303,7 +312,6 @@ span {
     p {
         font-size: 1em;
         margin: 80px 0px;
-
     }
     .watchword p {
         margin: auto;
