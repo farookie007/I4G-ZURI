@@ -15,6 +15,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+@keyframes wiggle {
+  0%, 7% {
+      transform: rotateZ(0);
+  }
+  15% {
+      transform: rotateZ(-15deg);
+  }
+  20% {
+      transform: rotateZ(10deg);
+  }
+  25% {
+      transform: rotateZ(-10deg);
+  }
+  30% {
+      transform: rotateZ(6deg);
+  }
+  35% {
+      transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+      transform: rotateZ(0);
+  }
+}
+  
+@keyframes fade-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  
 
 
 body {
@@ -30,6 +63,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+header img {
+  animation: fade-in 2s 1;
 }
 p.message {
   padding: 1.2em 0;
@@ -100,6 +136,10 @@ button {
   font-weight: 800;
   border-radius: 30px;
 }
+.header-top button {
+  animation: wiggle 3s linear 2s;
+}
+
 .header-top button {
   background-color: var(--whitee);
   border: 2px solid var(--whitee);
