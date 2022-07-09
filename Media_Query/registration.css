@@ -26,6 +26,7 @@ body {
     font-size: 16px;
     font-family: Poppins, calibri;
     color: --color;
+    min-height: 100vh;
 }
 input {
     display: block;
@@ -294,7 +295,7 @@ input:focus::placeholder {
     body {
         background-image: url(images/bg-intro-mobile.png);
         background-color: var(--red);
-        font-size: 16px;
+        font-size: 13px;
     }
     main {
         display: flex;
