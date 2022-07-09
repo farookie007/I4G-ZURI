@@ -13,9 +13,11 @@
     --green: hsl(154, 59%, 51%);
     --blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%);
+    --fade-dark-blue: hsla(249, 10%, 26%, 50%);
     --grayish-blue: hsl(246, 25%, 77%);
+    --faded-white: hsla(100, 100%, 100%, 80%);
     --color: white;
-    --radius: 5px;
+    --radius: 8px;
 }
 
 body {
@@ -23,34 +25,21 @@ body {
     background-color: var(--red);
     font-size: 16px;
     font-family: Poppins, calibri;
-    height: 100vh;
     color: --color;
 }
 input {
     display: block;
-    margin: 0.8em 0;
-    padding: 1.8em;
+    margin: 2em 0 0em;
+    padding: 1.5em;
     width: 95%;
-    font-size: 0.6em;
+    font-size: 0.8em;
     border-radius: var(--radius);
     border: 1px solid var(--grayish-blue);
+    font-weight: 800;
+    color: var(--dark-blue);
+    font-family: Poppins, calibri;
 }
-.input-container {
-    position: relative;
-}
-input::placeholder {
-    font-weight: 700;
-    font-size: 1.3em;
-}
-input:focus {
-    outline: none !important;
-    border-color: var(--red);
-    border-width: 3px;
-}
-input:focus::placeholder {
-    display: none;
-    visibility: hidden;
-}
+
 #submit {
     font-size: 0.8em;
     font-weight: 700;
@@ -58,63 +47,12 @@ input:focus::placeholder {
 #submit:hover {
     background-color: hsla(154, 59%, 51%, 50%);
 }
-i {
-    position: absolute;
-    right: 3em;
-    top: 0.8em;
-    width: 1.5em;
-    height: 1.5em;
-    background-image: url(images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: none;
-}
-#error-msg {
-    display: none;
-    position: absolute;
-    font-size: 0.8em;
-    left: 1.5em;
-    top: -0.3em;
-    color: var(--red);
-    font-weight: 500;
-}
-
-
-input:placeholder-shown:focus + .placeholder + i {
-    display: inline-block;
-    z-index: 999;
-}
-input:placeholder-shown:focus + .placeholder + i + #error-msg {
-    display: inline-block;
-    z-index: 999;
-}
-input:placeholder-shown:focus + #fName::after {
-    content: "First Name cannot be empty";
-}
-input:placeholder-shown:focus + #lName::after {
-    content: "Last Name cannot be empty";
-}
-input:placeholder-shown:focus + #eMail::after {
-    content: "Looks like this is not an email";
-}
-input:placeholder-shown:focus + #passWord::after {
-    content: "Password cannot be empty";
-}
-.placeholder {
-    display: block;
-    width: 95%;
-    text-align: right;
-    font-size: 0.7em;
-    color: var(--red);
-    font-weight: 500;
-    font-style: italic;
-    padding-bottom: 1em;
-}
 
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     animation: wiggle 3s linear 1s;
+    line-height: 1em;
 }
 
 @keyframes wiggle {
@@ -162,12 +100,15 @@ main {
 p {
     font-size: 1em;
     margin: 20px 0;
+    font-weight: 500;
+    color: var(--faded-white);
+
 }
 .top {
     background-color: var(--blue);
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 0.7em;
+    margin: 1.5em 0;
+    padding: 1em;
+    font-size: 1em;
     border-radius: var(--radius);
     color: hsla(0, 0%, 100%, 80%);
     box-shadow: 0px 0.5em rgb(219, 112, 112);
@@ -176,7 +117,7 @@ p {
 }
 
 .top b {
-    color: --color;
+    color: var(--color);
 }
 
 
@@ -202,17 +143,83 @@ input#submit {
     box-shadow: 0px .2em rgb(93, 154, 126);
 }
 
-a {
+.bottom a {
     text-decoration: none;
-    font-weight: 700;
     color: var(--red);
+    font-weight: 800;
 }
 span {
     color: var(--grayish-blue);
 }
 .bottom {
-    font-size: 0.7em;
-    margin-top: 5px;
+    font-size: 0.75em;
+    margin-top: 1.2em;
+
+}
+
+/* This part handles how the error messages are displayed when focus is on the input box and it's empty */
+.placeholder {
+    display: none;
+    width: 95%;
+    text-align: right;
+    font-size: 1em;
+    color: var(--red);
+    font-weight: 500;
+    font-style: italic;
+}
+
+i {
+    position: absolute;
+    right: 8%;
+    top: 23%;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+}
+#error-msg {
+    display: none;
+    position: absolute;
+    font-size: 1.2em;
+    left: 4.5%;
+    top: -4%;
+    color: var(--red);
+    font-weight: 500;
+}
+
+
+input:placeholder-shown:focus + .placeholder + i {
+    display: inline-block;
+}
+input:placeholder-shown:focus + .placeholder + i + #error-msg {
+    display: inline-block;
+}
+input:placeholder-shown:focus + .placeholder {
+    display: block;
+}
+.input-container {
+    position: relative;
+}
+input::placeholder {
+    font-weight: 700;
+    font-size: 1.3em;
+    font-family: Poppins, calibri;
+}
+input:placeholder-shown:focus {
+    outline: none !important;
+    border-color: var(--red);
+    border-width: 3px;
+}
+input:focus {
+    outline: none !important;
+    border-color: var(--fade-dark-blue);
+    border-width: 3px;
+
+}
+input:focus::placeholder {
+    visibility: hidden;
 }
 
 
@@ -230,7 +237,6 @@ span {
         font-size: 12px;
         font-family: Poppins, calibri;
         color: --color;
-        min-height: 100vh;
     }
     main {
         display: flex;
@@ -256,27 +262,25 @@ span {
         margin: auto;
         margin-top: 20px;
     }
+
     input {
         padding: 1em;
-    }
-    input {
         font-size: 1em;
     }
 
 
     #error-msg {
         position: absolute;
-        font-size: 1em;
-        top: -6em;
-        left: 1.3em;
+        top: -110%;
+        left: 2%;
         width: fit-content;
         color: var(--red);
         font-weight: 500;
     }
     
     i {
-        right: 5em;
-        top: 1em;
+        right: 8%;
+        top: 25%;
     }
 
 }
@@ -291,9 +295,6 @@ span {
         background-image: url(images/bg-intro-mobile.png);
         background-color: var(--red);
         font-size: 16px;
-        font-family: Poppins, calibri;
-        color: --color;
-        min-height: 100vh;
     }
     main {
         display: flex;
@@ -325,11 +326,12 @@ span {
     }
 
     #error-msg {
-        top: -4.8em;
+        top: -78%;
+        left: 8%;
     }
     i {
-        right: 2em;
-        top: 1em;
+        right: 10%;
+        top: 25%;
     }
 }
 
