@@ -103,15 +103,6 @@ header {
   width: 90%;
   margin: 1em auto;
 }
-.header-top {
-  padding: 2em 0;
-  background-color: var(--pale_cyan);
-  position: sticky;
-  position: -webkit-sticky; /* for browsers like Safari */
-  top: 0;
-  /* border: 2px dashed red; */
-  
-}
 
 
 .section-container {
@@ -136,13 +127,11 @@ button {
   font-weight: 800;
   border-radius: 30px;
 }
-.header-top button {
-  animation: wiggle 3s linear 2s;
-}
 
 .header-top button {
   background-color: var(--whitee);
   border: 2px solid var(--whitee);
+  animation: wiggle 3s linear 2s;
 }
 
 .header-bottom div {
@@ -272,6 +261,9 @@ address {
   .section-container img {
     margin: auto;
   }
+  .header-top button {
+    padding: 0.8em 4em;
+  }
 
   .outro {
     width: 95%;
@@ -292,6 +284,7 @@ address {
     text-align: center;
     width: 100%;
   }
+
   
 }
 
