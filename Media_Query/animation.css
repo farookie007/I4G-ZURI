@@ -127,6 +127,17 @@ button {
   font-weight: 800;
   border-radius: 30px;
 }
+button:hover {
+  opacity: 0.8;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.social-icons i:hover {
+  color: var(--pink);
+}
 
 .header-top button {
   background-color: var(--whitee);
