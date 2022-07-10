@@ -171,7 +171,7 @@ span {
 
 i {
     position: absolute;
-    right: 8%;
+    right: 10%;
     top: 23%;
     width: 1.5em;
     height: 1.5em;
@@ -184,7 +184,7 @@ i {
     display: none;
     position: absolute;
     font-size: 1.2em;
-    left: 4.5%;
+    left: 6%;
     top: -4%;
     color: var(--red);
     font-weight: 500;
@@ -272,15 +272,15 @@ input:focus::placeholder {
 
     #error-msg {
         position: absolute;
-        top: -110%;
-        left: 2%;
+        top: -100%;
+        left: 5%;
         width: fit-content;
         color: var(--red);
         font-weight: 500;
     }
     
     i {
-        right: 8%;
+        right: 10%;
         top: 25%;
     }
 
@@ -319,20 +319,22 @@ input:focus::placeholder {
         margin: auto;
         margin-top: 20px;
     }
-    input {
-        padding: 1em;
+    .placeholder {
+        font-size: 0.8em;
     }
     input {
-        font-size: 1em;
+        padding: 1em;
+        font-size: 0.8em;
     }
 
     #error-msg {
-        top: -78%;
+        top: -112%;
         left: 8%;
+        font-size: 0.8em;
     }
     i {
         right: 10%;
-        top: 25%;
+        top: 20%;
     }
 }
 
