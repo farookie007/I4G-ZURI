@@ -264,6 +264,9 @@ address {
   .header-top button {
     padding: 0.8em 4em;
   }
+  .header-bottom {
+    text-align: center;
+  }
 
   .outro {
     width: 95%;
